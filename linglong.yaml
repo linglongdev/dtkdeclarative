@@ -1,0 +1,33 @@
+package:
+  id: dtkdeclarative
+  name: dtkdeclarative
+  kind: lib
+  version: 5.0.1
+  descriptipon: |
+    dtkdeclarative
+
+base:
+  id: org.deepin.base
+  version: 20.5.0
+
+depends:
+- id: qtbase/5.11.3.15
+- id: qtsvg/5.11.3
+- id: qtxdg/3.3.1.1
+- id: gsettings-qt/0.2
+- id: qtquickcontrols2/5.11.3
+- id: qtdeclarative/5.11.3
+- id: dtkcommon/5.5.3
+- id: dtkcore/5.5.26
+- id: dtkgui/5.5.22
+- id: googletest/1.8.1
+
+source:
+  kind: git
+  url: https://github.com/linuxdeepin/dtkdeclarative.git
+  version: develop/snipe
+  commit: d84875fa54b34307150d673d5b9a10b1ed93b252
+
+  patch: []
+build:
+  kind: qmake
