@@ -13,7 +13,7 @@ base:
 depends:
 - id: qtbase/5.11.3.15
 - id: qtsvg/5.11.3
-- id: qtxdg/3.3.1.1
+- id: libqtxdg/3.3.1.1
 - id: gsettings-qt/0.2
 - id: qtquickcontrols2/5.11.3
 - id: qtdeclarative/5.11.3
