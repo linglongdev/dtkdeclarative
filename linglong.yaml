@@ -6,21 +6,24 @@ package:
   descriptipon: |
     dtkdeclarative
 
+runtime:
+  id: org.deepin.Runtime/23.0.0
 base:
   id: org.deepin.base
   version: 23.0.0
 
 depends:
-- id: qtbase/5.11.3.15
-- id: qtsvg/5.11.3
-- id: libqtxdg/3.3.1.1
-- id: gsettings-qt/0.2
-- id: qtquickcontrols2/5.11.3
-- id: qtdeclarative/5.11.3
-- id: dtkcommon/5.5.3
-- id: dtkcore/5.5.26
-- id: dtkgui/5.5.22
-- id: googletest/1.8.1
+  - id: qtbase/5.11.3.15
+  - id: qtsvg/5.11.3
+  - id: libqtxdg/3.6.0.1
+  - id: gsettings-qt/0.3
+  - id: qtquickcontrols2/5.11.3
+  - id: qtdeclarative/5.11.3
+  - id: dtkcommon/5.5.3
+  - id: dtkcore/5.6
+  - id: dtkgui/5.6
+  - id: icu/63
+  - id: googletest/1.8.1
 
 source:
   kind: git
@@ -29,5 +32,12 @@ source:
   commit: d84875fa54b34307150d673d5b9a10b1ed93b252
 
   patch: []
+
+variables:
+  extra_args: |
+    -DBUILD_EXAMPLES=OFF \
+    -DBUILD_DOCS=OFF \
+    -DVERSION=${VERSION}
+
 build:
-  kind: qmake
+  kind: cmake
